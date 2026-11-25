@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Персональное портфолио разработчика и дизайнера"
+  >
+
+  <title>Моё портфолио</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#" class="logo">Alex Portfolio</a>
+
+    <nav class="topbar__actions">
+      <button type="button" data-modal="loginModal">
+        Войти
+      </button>
+
+      <button type="button" data-modal="registerModal">
+        Регистрация
+      </button>
+
+      <button type="button" data-modal="contactModal">
+        Связаться
+      </button>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+
+      <section class="sidebar__intro">
+        <h1>Привет!</h1>
+
+        <p>
+          Я создаю сайты, интерфейсы и цифровые продукты.
+          Здесь собраны мои проекты, навыки и опыт.
+        </p>
+      </section>
+
+      <nav class="categories" aria-label="Основная навигация">
+        <a class="active" href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#skills">Навыки</a>
+        <a href="#experience">Опыт</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+    </aside>
+
+    <main class="content">
+
+      <section id="about" class="content-section">
+        <h2>Обо мне</h2>
+
+        <p>
+          Меня зовут Алекс. Я занимаюсь разработкой сайтов и созданием
+          удобных пользовательских интерфейсов. Люблю минималистичный дизайн,
+          понятную структуру и качественную реализацию.
+        </p>
+      </section>
+
+      <section id="projects" class="content-section">
+        <h2>Проекты</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <h3>Проект 01</h3>
+
+            <p>
+              Персональный сайт с адаптивной версткой и современной
+              визуальной системой.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Проект 02</h3>
+
+            <p>
+              Интерфейс веб-приложения для управления задачами и проектами.
+
+                        <article class="project-card">
+            <h3>Проект 03</h3>
+
+            <p>
+              Лендинг для цифрового продукта с акцентом на типографику,
+              анимации и конверсию.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Проект 04</h3>
+
+            <p>
+              Дизайн и разработка портфолио для творческого специалиста.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <h2>Навыки</h2>
+
+        <p>
+          HTML, CSS, JavaScript, адаптивная верстка, Git, GitHub,
+          Figma, UI/UX-дизайн и работа с современными веб-инструментами.
+        </p>
+      </section>
+
+      <section id="experience" class="content-section">
+        <h2>Опыт</h2>
+
+        <p>
+          Разрабатываю сайты, интерфейсы и небольшие веб-приложения.
+          Работаю над проектами самостоятельно и в команде.
+        </p>
+      </section>
+
+      <section id="contacts" class="content-section">
+        <h2>Контакты</h2>
+
+        <p>
+          Если вы хотите обсудить проект, свяжитесь со мной удобным способом.
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:hello@example.com">
+            hello@example.com
+          </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/ваш-логин"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/ваш-логин
+          </a>
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Модальное окно входа -->
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" type="button">×</button>
+
+      <h2>Вход</h2>
+
+      <form>
+        <label for="loginEmail">Email</label>
+        <input
+          id="loginEmail"
+          type="email"
+          placeholder="Введите email"
+          required
+        >
+
+        <label for="loginPassword">Пароль</label>
+        <input
+          id="loginPassword"
+          type="password"
+          placeholder="Введите пароль"
+          required
+        >
+
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно регистрации -->
+
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" type="button">×</button>
+
+      <h2>Регистрация</h2>
+
+      <form>
+        <label for="registerName">Имя</label>
+        <input
+          id="registerName"
+          type="text"
+          placeholder="Введите имя"
+          required
+        >
+
+        <label for="registerEmail">Email</label>
+        <input
+          id="registerEmail"
+          type="email"
+          placeholder="Введите email"
+          required
+        >
+
+        <label for="registerPassword">Пароль</label>
+        <input
+          id="registerPassword"
+          type="password"
+          placeholder="Создайте пароль"
+          required
+        >
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно контактов -->
+
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" type="button">×</button>
+
+      <h2>Связаться со мной</h2>
+
+      <form>
+        <label for="contactName">Имя</label>
+        <input
+          id="contactName"
+          type="text"
+          placeholder="Ваше имя"
+          required
+        >
+
+        <label for="contactEmail">Email</label>
+        <input
+          id="contactEmail"
+          type="email"
+          placeholder="Ваш email"
+          required
+        >
+  <script src="js/main.js"></script>
+</body>
+</html>
