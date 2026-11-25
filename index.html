@@ -57,7 +57,6 @@
   .cat-item:hover{background:rgba(157,91,255,0.10);border-color:rgba(157,91,255,0.35);color:#fff;box-shadow:0 0 12px rgba(157,91,255,0.25)}
   .cat-item.active{background:rgba(157,91,255,0.16);border-color:rgba(157,91,255,0.5);box-shadow:0 0 16px rgba(157,91,255,0.32)}
   .cat-del{font:inherit;font-size:18px;line-height:1;color:var(--muted);background:none;border:none;cursor:pointer;padding:10px 10px;border-radius:10px;min-width:40px;text-align:center;visibility:hidden}
-  .cat-row:hover .cat-del{visibility:visible}
   .cat-del:hover{color:#ff6b6b;background:rgba(255,107,107,0.12)}
   .sidebar-foot{margin-top:auto;font-size:11px;color:var(--muted)}
   main{position:relative;z-index:30;margin-left:25%;padding:96px 44px 120px;min-height:100vh;display:flex;flex-direction:column;gap:26px}
@@ -143,7 +142,7 @@
   @media (max-width:599px){.sidebar{max-height:44vh}.toast{bottom:calc(44vh + 10px)}.card{padding:20px 16px}h2{font-size:18px}p{font-size:14px}}
   @media (max-width:599px) and (orientation:landscape){.sidebar{max-height:32vh;padding:8px 12px 12px}main{padding-top:56px;padding-left:12px;padding-right:12px}.toast{bottom:calc(32vh + 8px)}}
 </style>
-</head>
+<style></style></head>
 <body data-theme="neon">
 
 <div class="scene"></div>
@@ -165,11 +164,11 @@
   <div class="divider"></div>
   <div class="cat-label">Категории <button class="cat-add" id="catAdd" title="Добавить категорию" style="">+</button><button class="cat-add" id="catExport" title="Экспорт всей страницы в файл" style="">⟳</button><button class="cat-add" id="catImport" title="Импорт страницы из файла" style="">⤵</button></div>
   <input type="file" id="importFile" accept=".html,.txt,text/html,text/plain" style="display:none">
-  <nav class="cat-list" id="catList"><div class="cat-row"><a class="cat-item active" href="#cat">Главная</a><button class="cat-del" title="Удалить категорию">×</button></div></nav>
+  <nav class="cat-list" id="catList"><div class="cat-row"><a class="cat-item active" href="#home">Главная</a><button class="cat-del" title="Удалить категорию">×</button></div></nav>
   <div class="sidebar-foot">GIR site · freelance managment · v0.6</div>
 </aside>
 
-<main id="main"><section class="card" id="cat"><div class="card-head"><h2>Главная <span class="dot">·</span></h2><button class="card-edit">Редактировать</button></div><div class="blk-wrap"><div class="blk" data-idx="0"><div class="blk-preview"><p>°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。</p></div><div class="blk-edit"><input class="blk-input" data-f="title" placeholder="Заголовок (необязательно)" value=""><textarea class="blk-textarea" data-f="body" placeholder="Текст блока">°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。</textarea></div><div class="blk-ctl"><span class="move" title="Перетащить вверх/вниз">⋮⋮</span><button data-act="up" title="Вверх">↑</button><button data-act="down" title="Вниз">↓</button><button data-act="edit" title="Изменить блок">✎</button><button data-act="del" title="Удалить блок">×</button></div></div></div><div class="card-actions"><button class="btn cancel" title="Удалить категорию и её содержимое">Удалить</button><button class="btn save">Сохранить</button><button class="btn cancel">Отмена</button></div><div class="blk-add-wrap"><button class="blk-add" title="Добавить блок в категорию">+ <span style="font-size:13px">добавить блок</span></button><div class="blk-type-picker"><button class="blk-type-btn" data-type="text">Текст — заголовок и текст</button><button class="blk-type-btn" data-type="image">Фото — ссылка на изображение + подпись</button><button class="blk-type-btn" data-type="link">Кнопка-ссылка — текст (можно пусто) + URL</button></div></div></section></main>
+<main id="main"><section class="card" id="home"><div class="card-head"><h2>Главная <span class="dot">·</span></h2><button class="card-edit">Редактировать</button></div><div class="blk-wrap"><div class="blk" data-idx="0"><div class="blk-preview"><p></p></div><div class="blk-edit"><input class="blk-input" data-f="title" placeholder="Заголовок (необязательно)" value=""><textarea class="blk-textarea" data-f="body" placeholder="Текст блока"></textarea></div><div class="blk-ctl"><span class="move" title="Перетащить вверх/вниз">⋮⋮</span><button data-act="up" title="Вверх">↑</button><button data-act="down" title="Вниз">↓</button><button data-act="edit" title="Изменить блок">✎</button><button data-act="del" title="Удалить блок">×</button></div></div></div><div class="card-actions"><button class="btn cancel" title="Удалить категорию и её содержимое">Удалить</button><button class="btn save">Сохранить</button><button class="btn cancel">Отмена</button></div><div class="blk-add-wrap"><button class="blk-add" title="Добавить блок в категорию">+ <span style="font-size:13px">добавить блок</span></button><div class="blk-type-picker"><button class="blk-type-btn" data-type="text">Текст — заголовок и текст</button><button class="blk-type-btn" data-type="image">Фото — ссылка на изображение + подпись</button><button class="blk-type-btn" data-type="link">Кнопка-ссылка — текст (можно пусто) + URL</button></div></div></section></main>
 
 <div class="drawer-backdrop" id="drawerBackdrop"></div>
 <div class="drawer" id="drawer">
@@ -259,7 +258,7 @@ function loadBlocks(id){
     const raw = localStorage.getItem(BLOCKS_KEY + ":" + id);
     if(raw){ const p = JSON.parse(raw); if(Array.isArray(p)) return p; }
   }catch(e){}
-  return [{id:blkId(), type:"text", title:"", body:"°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。°‧ 𓆝 𓆟 𓆞 ·。"}];
+  return [{id:blkId(), type:"text", title:"", body:""}];
 }
 function saveBlocks(id, arr){ try{ localStorage.setItem(BLOCKS_KEY + ":" + id, JSON.stringify(arr)); }catch(e){} }
 
@@ -338,6 +337,7 @@ function setEditorUi(on){
   editorUnlocked = !!on;
   loginBtn.classList.toggle("on", editorUnlocked);
   document.querySelectorAll(".cat-add").forEach(b => { b.style.visibility = editorUnlocked ? "" : "hidden"; });
+  renderSidebar();   // EDIT: перерисовать сайдбар — крестики появляются/пропадают сразу
   renderMain();
 }
 
@@ -508,12 +508,15 @@ function renderSidebar(){
     a.href = "#" + c.id;
     a.textContent = c.name;
     a.addEventListener("click", e => { e.preventDefault(); setActive(c.id); });
-    const del = document.createElement("button");
-    del.className = "cat-del";
-    del.textContent = "×";
-    del.title = "Удалить категорию";
-    del.addEventListener("click", e => { e.stopPropagation(); removeCat(c.id); });
-    row.append(a, del);
+    row.append(a);
+    if (editorUnlocked) {   // EDIT: крестик только в режиме редактора
+      const del = document.createElement("button");
+      del.className = "cat-del";
+      del.textContent = "×";
+      del.title = "Удалить категорию";
+      del.addEventListener("click", e => { e.stopPropagation(); removeCat(c.id); });
+      row.append(del);
+    }
     catList.append(row);
   });
 }
@@ -710,5 +713,6 @@ function init(){
 
 init();
 </script>
+
 
 </body></html>
